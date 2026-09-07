@@ -1,0 +1,14 @@
+{
+	"host": "10.0.0.10",
+	"port": 801,
+	"streaming_mode": 1,
+	"vicon_mode": 1,
+	"scale": 1,
+	"seed": 0,
+	"camera_rotation_offset": [
+		0,
+		0,
+		0,
+		1
+	]
+}
