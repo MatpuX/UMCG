@@ -6,9 +6,8 @@ using UnityEngine.UIElements;
 
 public class ObjectMove : MonoBehaviour
 {
-    public Rigidbody _rb;
+    private Rigidbody _rb;
     private Vector3 startPos;
-    public GameObject HandL;
     private float elapsed = 0;
     private float travelTime = 2;
     private Vector3 newTarget; 
