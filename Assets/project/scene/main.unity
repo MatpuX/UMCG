@@ -444,6 +444,7 @@ Transform:
   m_Children:
   - {fileID: 1052566779}
   - {fileID: 1279044246}
+  - {fileID: 600095718}
   m_Father: {fileID: 224220450}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -623,7 +624,7 @@ GameObject:
   - component: {fileID: 241772412}
   - component: {fileID: 241772413}
   m_Layer: 0
-  m_Name: LeftHand
+  m_Name: Matt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1114,6 +1115,56 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &455480019
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 455480020}
+  - component: {fileID: 455480021}
+  m_Layer: 0
+  m_Name: Hand1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &455480020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455480019}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 539591304}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &455480021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455480019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand1
 --- !u!1 &496901872
 GameObject:
   m_ObjectHideFlags: 0
@@ -1331,6 +1382,60 @@ MonoBehaviour:
     Self: 
     UseShared: 1
   Name: wand_center
+--- !u!1 &539591303
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539591304}
+  - component: {fileID: 539591305}
+  m_Layer: 0
+  m_Name: hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539591304
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539591303}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 455480020}
+  - {fileID: 1910539139}
+  - {fileID: 1068219588}
+  m_Father: {fileID: 584081281}
+  m_RootOrder: -2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &539591305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539591303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6431de0c1479254781025eb6d33c76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand
+  SavedReference: 0
 --- !u!1 &580951452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1397,9 +1502,64 @@ Transform:
   - {fileID: 514785675}
   - {fileID: 1645083442}
   - {fileID: 1699002432}
+  - {fileID: 539591304}
   m_Father: {fileID: 224220450}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &600095717
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600095718}
+  - component: {fileID: 600095719}
+  m_Layer: 0
+  m_Name: hand
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &600095718
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600095717}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1661797416}
+  - {fileID: 1436693705}
+  - {fileID: 1091376692}
+  m_Father: {fileID: 169879712}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &600095719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600095717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6431de0c1479254781025eb6d33c76c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand
+  SavedReference: 0
 --- !u!1 &797080423
 GameObject:
   m_ObjectHideFlags: 0
@@ -1824,7 +1984,7 @@ MonoBehaviour:
     Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
     Self: 
     UseShared: 1
-  Name: RightHand
+  Name: Hand
 --- !u!1 &995815509
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,7 +2135,7 @@ GameObject:
   - component: {fileID: 1052566779}
   - component: {fileID: 1052566780}
   m_Layer: 0
-  m_Name: TestSub2
+  m_Name: TestingMatt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2052,6 +2212,56 @@ Transform:
   m_Father: {fileID: 224220450}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1068219587
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1068219588}
+  - component: {fileID: 1068219589}
+  m_Layer: 0
+  m_Name: Hand3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1068219588
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068219587}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 539591304}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1068219589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1068219587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand3
 --- !u!1 &1089370930
 GameObject:
   m_ObjectHideFlags: 0
@@ -2102,6 +2312,56 @@ MonoBehaviour:
     Self: 
     UseShared: 1
   Name: MarkerA
+--- !u!1 &1091376691
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1091376692}
+  - component: {fileID: 1091376693}
+  m_Layer: 0
+  m_Name: Hand3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1091376692
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091376691}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 600095718}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1091376693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1091376691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand3
 --- !u!1 &1112561013
 GameObject:
   m_ObjectHideFlags: 0
@@ -3102,6 +3362,56 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1436693704
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1436693705}
+  - component: {fileID: 1436693706}
+  m_Layer: 0
+  m_Name: Hand2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1436693705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436693704}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 600095718}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1436693706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436693704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand2
 --- !u!1 &1444024334
 GameObject:
   m_ObjectHideFlags: 0
@@ -3489,7 +3799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1557023855}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 5.42}
+  m_LocalPosition: {x: 0, y: 1.182, z: 5.42}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -3589,6 +3899,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UsePosition: 0
   UseRotation: 1
+--- !u!1 &1661797415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1661797416}
+  - component: {fileID: 1661797417}
+  m_Layer: 0
+  m_Name: Hand1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1661797416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661797415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 600095718}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1661797417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1661797415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand1
 --- !u!1 &1683948918
 GameObject:
   m_ObjectHideFlags: 0
@@ -3890,6 +4250,56 @@ Transform:
   m_Father: {fileID: 224220450}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1910539138
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1910539139}
+  - component: {fileID: 1910539140}
+  m_Layer: 0
+  m_Name: Hand2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1910539139
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910539138}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 539591304}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1910539140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1910539138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand2
 --- !u!1 &2089108312
 GameObject:
   m_ObjectHideFlags: 0

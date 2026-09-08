@@ -16,12 +16,8 @@ public class ObjectMove : MonoBehaviour
     // Start is called before the first frame update
     private void OnEnable()
     {
-        
         _rb = GetComponent<Rigidbody>();
         startPos = transform.position;
-        //targetPos = HandL.transform.position;
-        
-
     }
 
     private void Update()
