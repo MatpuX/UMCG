@@ -14,7 +14,7 @@ public class ObjectMove : MonoBehaviour
     private bool canMove;
 
     // Start is called before the first frame update
-    private void Start()
+    private void OnEnable()
     {
         
         _rb = GetComponent<Rigidbody>();
@@ -24,34 +24,17 @@ public class ObjectMove : MonoBehaviour
 
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space)) decideTarget();
-    }
-
     // Update is called once per frame
     void FixedUpdate()
     {
         
-        if (!canMove) return;
-        Debug.Log("Target" + targetPos);
+        if (!NetBehaviour.Instance.canMove) return;
+        //Debug.Log("Target" + targetPos);
         elapsed += Time.fixedDeltaTime;
         float t = (travelTime <= 0.0001f) ? 1f : Mathf.Clamp01(elapsed / travelTime);
-        Vector3 nextPos = Vector3.Lerp(startPos, targetPos, t);
+        Vector3 nextPos = Vector3.Lerp(startPos, NetBehaviour.Instance.newTarget, t);
         
         _rb.MovePosition(nextPos);
     }
 
-
-    void decideTarget()
-    {
-        targetPos = NetBehaviour.Instance.RandomTarget(startPos, targetPos);
-        canMove = !canMove;
-    }
-
-
-    void netSize()
-    {
-
-    }
 }

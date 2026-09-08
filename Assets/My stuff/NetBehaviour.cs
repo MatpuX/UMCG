@@ -9,7 +9,8 @@ public class NetBehaviour : MonoBehaviour
     private float netWidth;
     private Vector3 netMin;
     private Vector3 netMax;
-    private Vector3 newTarget;
+    public Vector3 newTarget;
+    public bool canMove;
     public static NetBehaviour Instance { get; private set; }
 
     void Start()
@@ -33,7 +34,7 @@ public class NetBehaviour : MonoBehaviour
         min.y -= height;
         max.x += width;
         max.y += height;
-
+        
         return (min, max);
     }
 
@@ -41,20 +42,23 @@ public class NetBehaviour : MonoBehaviour
     {
         float x = Random.Range(minBound.x, maxBound.x);
         float y = Random.Range(minBound.y, maxBound.y);
-        float z = -2; // will just be center.z if you don't expand z
+        float z = -2;
+        
         return new Vector3(x, y, z);
+        
     }
 
     void Update()
     {
         
         
-        /*
+        
         if (Input.GetKeyDown("space"))
         {
             newTarget = RandomTarget(netMin, netMax);
             Debug.Log("New target " + newTarget);
+            canMove = true;
         }
-        */
+        
     }
 }
