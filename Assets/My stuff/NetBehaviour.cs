@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor.Rendering.LookDev;
@@ -9,8 +10,8 @@ public class NetBehaviour : MonoBehaviour
     private float netWidth;
     private Vector3 netMin;
     private Vector3 netMax;
-    public Vector3 newTarget;
-    public bool canMove;
+    
+    
     public static NetBehaviour Instance { get; private set; }
 
     void Start()
@@ -19,7 +20,7 @@ public class NetBehaviour : MonoBehaviour
         netWidth = this.gameObject.transform.localScale.x / 2;
         netHeight = this.gameObject.transform.localScale.y / 2;
 
-        //capture the returned bounds
+        //capture returned bounds
         (netMin, netMax) = CalculateNetBounds(this.gameObject.transform.position, netHeight, netWidth);
 
         Debug.Log("Net bounds: " + netMin + " to " + netMax);
@@ -38,27 +39,25 @@ public class NetBehaviour : MonoBehaviour
         return (min, max);
     }
 
-    public Vector3 RandomTarget(Vector3 minBound, Vector3 maxBound)
+    public Vector3 RandomTarget()
     {
-        float x = Random.Range(minBound.x, maxBound.x);
-        float y = Random.Range(minBound.y, maxBound.y);
+        float x = UnityEngine.Random.Range(netMin.x, netMax.x);
+        float y = UnityEngine.Random.Range(netMin.y, netMax.y);
         float z = -2;
         
         return new Vector3(x, y, z);
         
     }
 
-    void Update()
+    
+
+
+    private void OnTriggerEnter(Collider other)
     {
-        
-        
-        
-        if (Input.GetKeyDown("space"))
+        if (other.CompareTag("Ball"))
         {
-            newTarget = RandomTarget(netMin, netMax);
-            Debug.Log("New target " + newTarget);
-            canMove = true;
+            Debug.Log("Scored");
+            Destroy(other.gameObject);
         }
-        
     }
 }
