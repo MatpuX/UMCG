@@ -59,8 +59,8 @@ namespace insitu
 				Current.rotation = double4.Smooth(Current.rotation, Rotation, ref RotationVelocity, deltaTime, Smoothing);
 			}
 			
-			Debug.Log(pose.json());
-			Debug.Log(Current.json());
+			//Debug.Log(pose.json());
+			//Debug.Log(Current.json());
 		}
 
 		public override pose Pose()
