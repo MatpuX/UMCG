@@ -1,63 +1,46 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Rendering.LookDev;
 using UnityEngine;
 
 public class NetBehaviour : MonoBehaviour
 {
-    private float netHeight;
-    private float netWidth;
-    private Vector3 netMin;
-    private Vector3 netMax;
-    
-    
     public static NetBehaviour Instance { get; private set; }
 
-    void Start()
+    [SerializeField] private BoxCollider targetArea;
+
+    private void Awake()
     {
         Instance = this;
-        netWidth = this.gameObject.transform.localScale.x / 2;
-        netHeight = this.gameObject.transform.localScale.y / 2;
 
-        //capture returned bounds
-        (netMin, netMax) = CalculateNetBounds(this.gameObject.transform.position, netHeight, netWidth);
-
-        Debug.Log("Net bounds: " + netMin + " to " + netMax);
+        if (targetArea == null)
+        {
+            targetArea = GetComponent<BoxCollider>();
+        }
     }
 
-    public (Vector3 min, Vector3 max) CalculateNetBounds(Vector3 center, float height, float width)
+    public Vector3 RandomTarget(float ballRadius = 0f)
     {
-        Vector3 min = center;
-        Vector3 max = center;
+        Bounds bounds = targetArea.bounds;
 
-        min.x -= width;
-        min.y -= height;
-        max.x += width;
-        max.y += height;
-        
-        return (min, max);
-    }
+        float x = Random.Range(
+            bounds.min.x + ballRadius,
+            bounds.max.x - ballRadius
+        );
 
-    public Vector3 RandomTarget()
-    {
-        float x = UnityEngine.Random.Range(netMin.x, netMax.x);
-        float y = UnityEngine.Random.Range(netMin.y, netMax.y);
-        float z = -2;
-        
+        float y = Random.Range(
+            bounds.min.y + ballRadius,
+            bounds.max.y - ballRadius
+        );
+
+        //keep the target at the front/back surface you want.
+        float z = bounds.center.z;
+
         return new Vector3(x, y, z);
-        
     }
-
-    
-
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Ball"))
         {
             Debug.Log("Scored");
-            Destroy(other.gameObject);
         }
     }
 }
