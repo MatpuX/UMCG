@@ -663,7 +663,7 @@ MonoBehaviour:
     Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
     Self: 
     UseShared: 1
-  Name: LeftHand
+  Name: Hand
 --- !u!1 &264869534
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,6 +1415,7 @@ Transform:
   - {fileID: 455480020}
   - {fileID: 1910539139}
   - {fileID: 1068219588}
+  - {fileID: 1305540967}
   m_Father: {fileID: 584081281}
   m_RootOrder: -2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1539,6 +1540,7 @@ Transform:
   - {fileID: 1661797416}
   - {fileID: 1436693705}
   - {fileID: 1091376692}
+  - {fileID: 1860633131}
   m_Father: {fileID: 169879712}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2781,6 +2783,56 @@ Transform:
   m_Father: {fileID: 224220450}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1305540966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1305540967}
+  - component: {fileID: 1305540968}
+  m_Layer: 0
+  m_Name: Hand4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1305540967
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305540966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 539591304}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1305540968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1305540966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand4
 --- !u!1 &1316625249
 GameObject:
   m_ObjectHideFlags: 0
@@ -4059,7 +4111,7 @@ GameObject:
   - component: {fileID: 1820024810}
   - component: {fileID: 1820024809}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: BallSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4117,6 +4169,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1860633130
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860633131}
+  - component: {fileID: 1860633132}
+  m_Layer: 0
+  m_Name: Hand4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1860633131
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860633130}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 600095718}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1860633132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860633130}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f92a2c2270cbcc743813bfade89fafea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  App: {fileID: 11400000, guid: 2153425d4ad2f7e4d9c9c9a19737f524, type: 2}
+  Subject:
+    Shared: {fileID: 11400000, guid: ba13f89046696a14dac0ee07fcd33ca7, type: 2}
+    Self: 
+    UseShared: 1
+  Name: Hand4
 --- !u!1 &1873609384
 GameObject:
   m_ObjectHideFlags: 0
